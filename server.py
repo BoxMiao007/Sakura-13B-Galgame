@@ -107,8 +107,8 @@ if __name__ == "__main__":
     if False:  # use uvicorn
         import uvicorn
         uvicorn.run("server:app",
-                    host="0.0.0.0",
-                    port=4040,
+                    host=ServerConfig.address,
+                    port=ServerConfig.port,
                     log_level=args.logLevel,
                     workers=1
                     )
