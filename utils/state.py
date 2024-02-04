@@ -7,7 +7,7 @@ from utils.model import SakuraModel
 
 class ServerConfig:
     address: str = "127.0.0.1"
-    port: int = 5000
+    port: int = 7899
     username: str|None = None
     password: str|None = None
 
