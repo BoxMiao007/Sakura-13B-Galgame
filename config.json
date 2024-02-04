@@ -1,0 +1,5 @@
+{
+    "last_processed": 0,
+    "endpoint": "http://127.0.0.1:5000/completion",
+    "api_type": 0
+}
