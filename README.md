@@ -1,12 +1,17 @@
 <div align="center">
 <h1>
-  Sakura-13B-Galgame
+  SakuraLLM
 </h1>
+<center>
+  <b>Sakura</b>: <b><ins>S</ins></b>FT <ins><b>A</b></ins>nd RLHF models using <ins><b>K</b></ins>nowledge of <ins><b>U</b></ins>niversal Character and <ins><b>R</b></ins>elationship <ins><b>A</b></ins>ttributes for Japanese to Chinese Translation in Light Novel & Galgame Domain.
+</center>
 </div>
 
 <p align="center">
 🤗 <a href="https://huggingface.co/sakuraumi/Sakura-13B-Galgame" target="_blank">Hugging Face</a> • 🤖 <a href="https://www.modelscope.cn/models/sakuraumi/Sakura-13B-Galgame" target="_blank">ModelScope</a>
 </p>
+
+# 目前Sakura发布的所有模型均采用[CC BY-NC-SA 4.0协议](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)，Sakura所有模型与其衍生模型均禁止任何形式的商用！
 
 # 介绍
 
@@ -21,6 +26,7 @@
 **对于其他适配本模型的项目如使用非本项目提供的prompt格式进行翻译，不保证会获得与README中的说明一致的质量！**
 
 **如果使用模型翻译并发布，请在最显眼的位置标注机翻！！！！！开发者对于滥用本模型造成的一切后果不负任何责任。**
+> 由于模型一直在更新，请同时注明使用的模型版本等信息，方便进行质量评估和更新翻译。
 
 **对于模型翻译的人称代词问题（错用，乱加，主宾混淆，男女不分等）和上下文理解问题，如果有好的想法或建议，欢迎提issue！**
 
@@ -34,16 +40,26 @@
 
 ### 模型下载：
 
-|   版本  | Transformers模型 | GGUF量化模型 | GPTQ 8bit量化 | GPTQ 4bit量化 | GPTQ 3bit量化 | AWQ量化
+|   发布时间-底模-参数量-版本  | Transformers模型 | GGUF量化模型 | GPTQ 8bit量化 | GPTQ 4bit量化 | GPTQ 3bit量化 | AWQ量化
 |:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
-| 20231026-v0.8 | 🤗 [Sakura-13B-LNovel-v0.8](https://huggingface.co/SakuraLLM/Sakura-13B-LNovel-v0.8) | 🤗 [Sakura-13B-LNovel-v0_8-GGUF](https://huggingface.co/SakuraLLM/Sakura-13B-LNovel-v0.8-GGUF) | 🤗 [Sakura-13B-LNovel-v0_8-8bit](https://huggingface.co/SakuraLLM/Sakura-13B-LNovel-v0_8-8bit) | 🤗 [Sakura-13B-LNovel-v0_8-4bit](https://huggingface.co/SakuraLLM/Sakura-13B-LNovel-v0_8-4bit) | 🤗 [Sakura-13B-LNovel-v0_8-3bit](https://huggingface.co/SakuraLLM/Sakura-13B-LNovel-v0_8-3bit) | 🤗 [Sakura-13B-LNovel-v0_8-AWQ](https://huggingface.co/SakuraLLM/Sakura-13B-LNovel-v0_8-AWQ) |
-| 20240111-v0.9 | 🤗 [Sakura-13B-LNovel-v0.9](https://huggingface.co/SakuraLLM/Sakura-13B-LNovel-v0.9) | 🤗 [Sakura-13B-LNovel-v0.9b-GGUF](https://huggingface.co/SakuraLLM/Sakura-13B-LNovel-v0.9b-GGUF) | - | - | - | - |
+| 20231026-Baichuan2 13B v0.8 | 🤗 [Sakura-13B-LNovel-v0.8](https://huggingface.co/SakuraLLM/Sakura-13B-LNovel-v0.8) | 🤗 [Sakura-13B-LNovel-v0_8-GGUF](https://huggingface.co/SakuraLLM/Sakura-13B-LNovel-v0.8-GGUF) | 🤗 [Sakura-13B-LNovel-v0_8-8bit](https://huggingface.co/SakuraLLM/Sakura-13B-LNovel-v0_8-8bit) | 🤗 [Sakura-13B-LNovel-v0_8-4bit](https://huggingface.co/SakuraLLM/Sakura-13B-LNovel-v0_8-4bit) | 🤗 [Sakura-13B-LNovel-v0_8-3bit](https://huggingface.co/SakuraLLM/Sakura-13B-LNovel-v0_8-3bit) | 🤗 [Sakura-13B-LNovel-v0_8-AWQ](https://huggingface.co/SakuraLLM/Sakura-13B-LNovel-v0_8-AWQ) |
+| 20240111-Qwen-14B-v0.9 | 🤗 [Sakura-13B-LNovel-v0.9](https://huggingface.co/SakuraLLM/Sakura-13B-LNovel-v0.9) | 🤗 [Sakura-13B-LNovel-v0.9b-GGUF](https://huggingface.co/SakuraLLM/Sakura-13B-LNovel-v0.9b-GGUF) | - | - | - | - |
+| 20240116-Qwen-7B-v0.9 | - | 🤗 [Sakura-7B-LNovel-v0.9-GGUF](https://huggingface.co/SakuraLLM/Sakura-7B-LNovel-v0.9-GGUF) | - | - | - | - |
+| 20240213-Qwen1.5-14B-v0.9 | 🤗 [Sakura-14B-Qwen2beta-v0.9](https://huggingface.co/SakuraLLM/Sakura-14B-Qwen2beta-v0.9) | 🤗 [Sakura-14B-Qwen2beta-v0.9-GGUF](https://huggingface.co/SakuraLLM/Sakura-14B-Qwen2beta-v0.9-GGUF) | - | - | - |
+| 20240214-Qwen1.5-1.8B-v0.9.1 | 🤗 [Sakura-1B8-Qwen2beta-v0.9.1](https://huggingface.co/SakuraLLM/Sakura-1B8-Qwen2beta-v0.9.1) | 🤗 [Sakura-1B8-Qwen2beta-v0.9.1](https://huggingface.co/SakuraLLM/Sakura-1B8-Qwen2beta-v0.9.1-GGUF) | - | - | - |
+| 20240303-Qwen1.5-14B-v0.10pre0 | 🤗 [Sakura-14B-Qwen2beta-v0.10pre0](https://huggingface.co/SakuraLLM/Sakura-14B-Qwen2beta-v0.10pre0) | 🤗 [Sakura-14B-Qwen2beta-v0.10pre0-GGUF](https://huggingface.co/SakuraLLM/Sakura-14B-Qwen2beta-v0.10pre0-GGUF) | - | - | - | - |
 
 p.s. 如果无法连接到HuggingFace服务器，可将链接中的`huggingface.co`改成`hf-mirror.com`，使用hf镜像站下载。
 
 ## News
 
-1.  **更新了0.9的正式版模型`v0.9b`。相比`v0.9`删除了一个可能导致污染的数据集。清洗并增加了预训练与微调的数据量。更推荐使用正式版模型，它会比之前的pre版本更加稳定，质量更高。**
+1. **更新了使用Importance Matrix进行量化的Sakura-14B-Qwen2beta-v0.9-GGUF模型。[模型地址](https://huggingface.co/SakuraLLM/Sakura-14B-Qwen2beta-v0.9-GGUF/blob/main/sakura-14b-qwen2beta-v0.9-iq4_xs.gguf)**
+
+1. **更新了基于Qwen1.5底模的`v0.9`版本模型，包括14B和1.8B两个版本。注意：此版本模型的结构为Qwen2. 同时补充更新了基于Qwen 7B的`v0.9`版本模型。**
+
+1. **更新了0.10的测试版模型`v0.10pre0`，增加了术语表功能，新的prompt格式详见[推理部分](https://github.com/SakuraLLM/Sakura-13B-Galgame?tab=readme-ov-file#%E6%8E%A8%E7%90%86)的prompt格式部分。注意：此版本模型的结构为qwen2。**
+
+1.  **更新了0.9的正式版模型`v0.9b`。清洗并增加了预训练与微调的数据量。更推荐使用正式版模型，它会比之前的pre版本更加稳定，质量更高。**
 
 1. **增加了vllm模型后端的支持，详见**[#40](https://github.com/SakuraLLM/Sakura-13B-Galgame/pull/40)
 
@@ -58,7 +74,8 @@ p.s. 如果无法连接到HuggingFace服务器，可将链接中的`huggingface.
   
    轻小说机翻机器人网站是一个自动生成轻小说机翻并分享的网站。你可以浏览日文网络小说，或者上传Epub/Txt文件，并生成机翻。
 
-1. [LunaTranslator](https://github.com/HIllya51/LunaTranslator)已经支持Sakura API，可以通过本地部署API后端，并在LunaTranslator中配置Sakura API来使用Sakura模型进行Galgame实时翻译。
+1. [LunaTranslator](https://github.com/HIllya51/LunaTranslator)已经支持Sakura API，可以通过本地部署API后端，并在LunaTranslator中配置Sakura API来使用Sakura模型进行Galgame实时翻译。  
+    ~~使用[KurikoMoe](https://github.com/kurikomoe/LunaTranslator/releases/latest)的版本可以支持流式输出。~~ 目前官方版本已经支持流式输出，只需在翻译设置界面勾选流式输出即可。
 
    LunaTranslator是一个Galgame翻译工具，支持剪贴板、OCR、HOOK，支持40余种翻译引擎。
 
@@ -72,7 +89,11 @@ p.s. 如果无法连接到HuggingFace服务器，可将链接中的`huggingface.
 
 1. [AiNiee](https://github.com/NEKOparapa/AiNiee-chatgpt)已经支持Sakura API，可以通过本地部署API后端，在AiNiee中使用Sakura模型进行翻译。
 
-  AiNiee是一款基于【mtool】或【Translator++】，chatgpt自动批量翻译工具，主要是用来翻译各种RPG游戏。
+   AiNiee是一款基于【mtool】或【Translator++】，chatgpt自动批量翻译工具，主要是用来翻译各种RPG游戏。
+
+1. [manga-image-translator](https://github.com/zyddnys/manga-image-translator)已经支持Sakura API，可以通过本地部署API后端，使用Sakura自动翻译漫画。
+
+1. [BallonsTranslator](https://github.com/dmMaze/BallonsTranslator)已经支持Sakura API，可以通过本地部署API后端，使用Sakura翻译漫画。
 
 # 显存需求
 
@@ -117,7 +138,7 @@ p.s. 如果无法连接到HuggingFace服务器，可将链接中的`huggingface.
   
 - 轻小说
 
-  网站：[轻小说机翻机器人](https://books.fishhawk.top/)已接入Sakura模型(v0.8-4bit)，站内有大量模型翻译的轻小说可供参考。
+  网站：[轻小说机翻机器人](https://books.fishhawk.top/)已接入Sakura模型(v0.9b-Q4_K_M)，站内有大量模型翻译的轻小说可供参考。
 
 - PPL/BLEU/Human
 
@@ -144,6 +165,33 @@ p.s. 如果无法连接到HuggingFace服务器，可将链接中的`huggingface.
     ]
     ```
 - prompt格式：
+
+  - v0.10pre0
+    代码处理如下：
+    ```python
+            gpt_dict = [{
+              "src": "原文1",
+              "dst": "译文1",
+              "info": "注释信息1",
+            },]
+            gpt_dict_text_list = []
+            for gpt in gpt_dict:
+                src = gpt['src']
+                dst = gpt['dst']
+                info = gpt['info'] if "info" in gpt.keys() else None
+                if info:
+                    single = f"{src}->{dst} #{info}"
+                else:
+                    single = f"{src}->{dst}"
+                gpt_dict_text_list.append(single)
+
+            gpt_dict_raw_text = "\n".join(gpt_dict_text_list)
+
+            user_prompt = "根据以下术语表：\n" + gpt_dict_raw_text + "\n" + "将下面的日文文本根据上述术语表的对应关系和注释翻译成中文：" + japanese
+            prompt = "<|im_start|>system\n你是一个轻小说翻译模型，可以流畅通顺地以日本轻小说的风格将日文翻译成简体中文，并联系上下文正确使用人称代词，注意不要擅自添加原文中没有的代词，也不要擅自增加或减少换行。<|im_end|>\n" \ # system prompt
+            + "<|im_start|>user\n" + user_prompt + "<|im_end|>\n" \ # user prompt
+            + "<|im_start|>assistant\n" # assistant prompt start
+    ```
 
   - v0.9
     文本格式如下：
@@ -198,7 +246,7 @@ p.s. 如果无法连接到HuggingFace服务器，可将链接中的`huggingface.
 | max new token | 512 |
 | min new token | 1 |
 
-**如出现退化，可增加`frequency_penalty`参数，并设置为大于0的某值，一般设置0.05~0.2即可。**
+**如出现退化（退化的例子可参见[#35](https://github.com/SakuraLLM/Sakura-13B-Galgame/issues/35)与[#36](https://github.com/SakuraLLM/Sakura-13B-Galgame/issues/36)），可增加`frequency_penalty`参数，并设置为大于0的某值，一般设置0.1~0.2即可。**
 
 # 微调
 
