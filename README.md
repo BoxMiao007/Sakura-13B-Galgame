@@ -47,6 +47,7 @@
 | 14B | 20240111-Qwen-14B-v0.9 | 🤗 [Sakura-13B-LNovel-v0.9](https://huggingface.co/SakuraLLM/Sakura-13B-LNovel-v0.9) | 🤗 [Sakura-13B-LNovel-v0.9b-GGUF](https://huggingface.co/SakuraLLM/Sakura-13B-LNovel-v0.9b-GGUF) |
 |     | 20240213-Qwen1.5-14B-v0.9 | 🤗 [Sakura-14B-Qwen2beta-v0.9](https://huggingface.co/SakuraLLM/Sakura-14B-Qwen2beta-v0.9) | 🤗 [Sakura-14B-Qwen2beta-v0.9-GGUF](https://huggingface.co/SakuraLLM/Sakura-14B-Qwen2beta-v0.9-GGUF) |
 | 7B  | 20240116-Qwen-7B-v0.9 | - | 🤗 [Sakura-7B-LNovel-v0.9-GGUF](https://huggingface.co/SakuraLLM/Sakura-7B-LNovel-v0.9-GGUF) |
+|     | 20240531-Qwen1.5-7B-Galtransl-v1 | - | 🤗 [Galtransl-v1](https://huggingface.co/SakuraLLM/GalTransl-v1) |
 | 1.8B| 20240214-Qwen1.5-1.8B-v0.9.1 | 🤗 [Sakura-1B8-Qwen2beta-v0.9.1](https://huggingface.co/SakuraLLM/Sakura-1B8-Qwen2beta-v0.9.1) | 🤗 [Sakura-1B8-Qwen2beta-v0.9.1-GGUF](https://huggingface.co/SakuraLLM/Sakura-1B8-Qwen2beta-v0.9.1-GGUF) |
 
 
@@ -54,7 +55,9 @@ p.s. 如果无法连接到HuggingFace服务器，可将链接中的`huggingface.
 
 ## News
 
-1. **更新了基于Qwen1.5-32B底模的v0.9版本和v0.10pre1版本的GGUF模型。其中v0.10pre1版本v0.10的预览版，具备术语表功能，相比上一版本优化翻译质量，同时使用新的prompt格式，详见[推理部分](https://github.com/SakuraLLM/Sakura-13B-Galgame?tab=readme-ov-file#%E6%8E%A8%E7%90%86)的prompt格式部分。**
+1. **更新了基于Qwen1.5-7B的[Galtransl-v1](https://huggingface.co/SakuraLLM/GalTransl-v1)模型，为视觉小说翻译任务专项优化。对视觉小说脚本中的行内换行、控制符、ruby注音等符号具有较好的保留能力。适配[GalTransl视觉小说翻译工具](https://github.com/xd2333/GalTransl)并调优，支持GPT字典（[字典写法见此](https://github.com/xd2333/GalTransl/wiki/GPT%E5%AD%97%E5%85%B8%E2%80%90sakura-galtransl)）。**
+
+1. **更新了基于Qwen1.5-32B底模的v0.9版本和v0.10pre1版本的GGUF模型。两个版本均于20240515再次更新，仓库名与文件名均未改变，需要重新下载。其中v0.10pre1版本v0.10的预览版，具备术语表功能，相比上一版本优化翻译质量，同时使用新的prompt格式，详见[推理部分](https://github.com/SakuraLLM/Sakura-13B-Galgame?tab=readme-ov-file#%E6%8E%A8%E7%90%86)的prompt格式部分。**
 
 1. **更新了使用Importance Matrix进行量化的Sakura-14B-Qwen2beta-v0.9-GGUF模型。[模型地址](https://huggingface.co/SakuraLLM/Sakura-14B-Qwen2beta-v0.9-GGUF/blob/main/sakura-14b-qwen2beta-v0.9-iq4_xs_ver2.gguf)**
 
@@ -133,9 +136,11 @@ p.s. 如果无法连接到HuggingFace服务器，可将链接中的`huggingface.
 
   网站：[轻小说机翻机器人](https://books.fishhawk.top/)已接入Sakura模型(v0.9)，站内有大量模型翻译的轻小说可供参考。
 
-- PPL/BLEU/Human
+- PPL
 
-  TBD
+  Sakura-14B-Qwen2beta-v0.9-iq4_xs_ver2: 4.43
+  
+  Sakura-32B-Qwen2beta-v0.9-iq4xs: 3.28
 
 # 推理
 
